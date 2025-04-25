@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doğayı Koru - Yeşil Gelecek</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #00c853;
+            --secondary: #00e676;
+            --accent: #ff6d00;
+            --dark: #1a237e;
+            --light: #e8f5e9;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            font-size: 18px;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f5f9fa;
+            color: #333;
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+        
+        /* Animasyonlar */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 1s ease-out;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            right: 0;
+            height: 100px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23f5f9fa" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23f5f9fa" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23f5f9fa"/></svg>');
+            background-size: cover;
+            z-index: 10;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            animation: pulse 3s infinite;
+        }
+        
+        nav {
+            background-color: var(--dark);
+            padding: 1.2rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+        
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 30px;
+            background-color: rgba(255,255,255,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: inline-block;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        nav a:hover {
+            background-color: var(--accent);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 3rem auto;
+            padding: 0 30px;
+        }
+        
+        section {
+            background-color: white;
+            border-radius: 15px;
+            padding: 2.5rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border-left: 5px solid var(--accent);
+            transition: transform 0.3s, box-shadow 0.3s;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        h2 {
+            font-size: 2.2rem;
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+        
+        h3 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            animation: fadeIn 0.8s ease-out;
+        }
+        
+        ul, ol {
+            padding-left: 2rem;
+        }
+        
+        li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 1.8rem;
+            animation: fadeIn 0.8s ease-out;
+            animation-fill-mode: both;
+        }
+        
+        ul li {
+            list-style-type: none;
+        }
+        
+        ul li::before {
+            content: "🌱";
+            position: absolute;
+            left: 0;
+            animation: float 3s infinite ease-in-out;
+        }
+        
+        ol {
+            counter-reset: list-counter;
+        }
+        
+        ol li {
+            counter-increment: list-counter;
+        }
+        
+        ol li::before {
+            content: counter(list-counter) ".";
+            color: var(--accent);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .fact-card {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-left: 4px solid var(--primary);
+            transition: all 0.3s;
+        }
+        
+        .fact-card:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        footer {
+            background: linear-gradient(135deg, var(--dark), #283593);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            margin-top: 5rem;
+            position: relative;
+        }
+        
+        footer::before {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0;
+            right: 0;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231a237e" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231a237e" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231a237e"/></svg>');
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DOĞAYI KORU</h1>
+        <p>Gelecek için harekete geç</p>
+    </header>
+
+    <nav>
+        <a href="#neden-korumaliyiz">Neden Korunmalı?</a>
+        <a href="#kuresel-isinma">Küresel Isınma</a>
+    </nav>
+
+    <div class="container">
+        <section id="neden-korumaliyiz">
+            <h2>NEDEN DOĞAYI KORUMALIYIZ?</h2>
+            
+            <div class="fact-card">
+                <p>Doğa, tüm canlıların yaşam kaynağıdır. Temiz hava, su ve verimli topraklar olmadan yaşamımızı sürdürmemiz mümkün değildir.</p>
+            </div>
+            
+            <h3>DOĞA KORUMANIN ÖNEMİ:</h3>
+            <ul>
+                <li><strong>Biyolojik çeşitliliği korur</strong> - Milyonlarca türün yaşam alanını muhafaza ederiz</li>
+                <li><strong>İklim değişikliğini yavaşlatır</strong> - Karbon ayak izimizi azaltırız</li>
+                <li><strong>Gelecek nesillere yaşanabilir bir dünya bırakırız</strong> - Sürdürülebilir kaynak kullanımı sağlarız</li>
+                <li><strong>Su kaynaklarını temiz tutar</strong> - İçme suyu kalitesini artırır</li>
+                <li><strong>Hava kalitesini iyileştirir</strong> - Solunum hastalıklarını azaltır</li>
+                <li><strong>Ekonomik fayda sağlar</strong> - Doğal kaynaklara dayalı ekonomileri korur</li>
+            </ul>
+        </section>
+
+        <section id="kuresel-isinma">
+            <h2>KÜRESEL ISINMA</h2>
+            
+            <div class="fact-card">
+                <p>Küresel ısınma, insan faaliyetleri sonucu atmosfere salınan sera gazlarının neden olduğu iklim değişikliğidir.</p>
+            </div>
+            
+            <h3>ETKİLERİ:</h3>
+            <ul>
+                <li><strong>Buzulların erimesi</strong> - Deniz seviyeleri yükseliyor, kıyı şehirleri tehdit altında</li>
+                <li><strong>Aşırı hava olayları</strong> - Kasırga, sel ve kuraklıkların sıklığı ve şiddeti artıyor</li>
+                <li><strong>Tarım alanlarının azalması</strong> - Gıda güvenliği ciddi risk altında</li>
+                <li><strong>Okyanus asitlenmesi</strong> - Deniz ekosistemleri çöküş noktasında</li>
+                <li><strong>Türlerin yok oluşu</strong> - Biyoçeşitlilik alarm verici hızda azalıyor</li>
+                <li><strong>Salgın hastalıklar</strong> - Yeni virüsler ve hastalıklar ortaya çıkıyor</li>
+            </ul>
+            
+            <h3>ÇÖZÜMLER:</h3>
+            <ol>
+                <li><strong>Enerji tasarrufu yapın</strong> - LED ampuller ve yüksek verimli cihazlar kullanın</li>
+                <li><strong>Sürdürülebilir ulaşım</strong> - Toplu taşıma, bisiklet veya yürüyüşü tercih edin</li>
+                <li><strong>Geri dönüşüm</strong> - Atıklarınızı ayrıştırın, kompost yapın</li>
+                <li><strong>Yenilenebilir enerji</strong> - Güneş panelleri ve rüzgar enerjisi sistemlerini destekleyin</li>
+                <li><strong>Su koruma</strong> - Yağmur suyu hasadı yapın, su tasarruflu cihazlar kullanın</li>
+                <li><strong>Ağaçlandırma</strong> - Yerel ağaç dikme projelerine katılın</li>
+                <li><strong>Bilinçli tüketim</strong> - Yerel ve organik ürünleri tercih edin</li>
+            </ol>
+        </section>
+    </div>
+
+    <footer>
+        <p><strong>MADE BY QUİDE</strong></p>
+    </footer>
+
+    <script>
+        // Nav linklerine animasyon ekleme
+        document.querySelectorAll('nav a').forEach((link, index) => {
+            link.style.animationDelay = `${index * 0.1}s`;
+        });
+        
+        // Section item'larına kademeli animasyon
+        document.querySelectorAll('li').forEach((item, index) => {
+            item.style.animationDelay = `${index * 0.15}s`;
+        });
+        
+        // Scroll animasyonu
+        const observerOptions = {
+            threshold: 0.1
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        document.querySelectorAll('section, h3, .fact-card').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
