@@ -7,11 +7,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #00c853;
-            --secondary: #00e676;
-            --accent: #ff6d00;
-            --dark: #1a237e;
-            --light: #e8f5e9;
+            --primary: #00e676;
+            --secondary: #00b248;
+            --accent: #00c853;
+            --dark: #1565c0;
+            --light: #e3f2fd;
+            --bright-blue: #2962ff;
+            --vivid-green: #00c853;
         }
         
         * {
@@ -27,7 +29,7 @@
         
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f5f9fa;
+            background-color: #e3f2fd;
             color: #333;
             line-height: 1.8;
             overflow-x: hidden;
@@ -52,7 +54,7 @@
         }
         
         header {
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            background: linear-gradient(135deg, var(--bright-blue), var(--vivid-green));
             color: white;
             text-align: center;
             padding: 5rem 1rem;
@@ -68,7 +70,7 @@
             left: 0;
             right: 0;
             height: 100px;
-            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23f5f9fa" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23f5f9fa" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23f5f9fa"/></svg>');
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%23e3f2fd" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%23e3f2fd" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%23e3f2fd"/></svg>');
             background-size: cover;
             z-index: 10;
         }
@@ -152,7 +154,7 @@
         }
         
         h3 {
-            color: var(--primary);
+            color: var(--bright-blue);
             font-size: 1.5rem;
             margin: 2rem 0 1rem;
             animation: fadeIn 0.8s ease-out;
@@ -191,18 +193,18 @@
         
         ol li::before {
             content: counter(list-counter) ".";
-            color: var(--accent);
+            color: var(--bright-blue);
             font-weight: bold;
             position: absolute;
             left: 0;
         }
         
         .fact-card {
-            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            background: linear-gradient(135deg, #e8f5e9, #bbdefb);
             border-radius: 10px;
             padding: 1.5rem;
             margin: 1.5rem 0;
-            border-left: 4px solid var(--primary);
+            border-left: 4px solid var(--bright-blue);
             transition: all 0.3s;
         }
         
@@ -212,7 +214,7 @@
         }
         
         footer {
-            background: linear-gradient(135deg, var(--dark), #283593);
+            background: linear-gradient(135deg, var(--dark), #0d47a1);
             color: white;
             text-align: center;
             padding: 3rem 0;
@@ -227,7 +229,7 @@
             left: 0;
             right: 0;
             height: 50px;
-            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231a237e" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231a237e" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231a237e"/></svg>');
+            background: url('data:image/svg+xml;utf8,<svg viewBox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none"><path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" fill="%231565c0" opacity=".25"/><path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" fill="%231565c0" opacity=".5"/><path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="%231565c0"/></svg>');
             background-size: cover;
         }
     </style>
@@ -241,6 +243,8 @@
     <nav>
         <a href="#neden-korumaliyiz">Neden Korunmalı?</a>
         <a href="#kuresel-isinma">Küresel Isınma</a>
+        <a href="#cozumler">Çözümler</a>
+        <a href="#projeler">Projeler</a>
     </nav>
 
     <div class="container">
@@ -248,17 +252,21 @@
             <h2>NEDEN DOĞAYI KORUMALIYIZ?</h2>
             
             <div class="fact-card">
-                <p>Doğa, tüm canlıların yaşam kaynağıdır. Temiz hava, su ve verimli topraklar olmadan yaşamımızı sürdürmemiz mümkün değildir.</p>
+                <p>Doğa, tüm canlıların yaşam kaynağıdır. Temiz hava, su ve verimli topraklar olmadan yaşamımızı sürdürmemiz mümkün değildir. Her geçen gün artan çevre sorunları, doğal kaynaklarımızı tehdit ediyor ve gelecek nesillerin yaşam kalitesini riske atıyor.</p>
             </div>
             
             <h3>DOĞA KORUMANIN ÖNEMİ:</h3>
             <ul>
-                <li><strong>Biyolojik çeşitliliği korur</strong> - Milyonlarca türün yaşam alanını muhafaza ederiz</li>
-                <li><strong>İklim değişikliğini yavaşlatır</strong> - Karbon ayak izimizi azaltırız</li>
-                <li><strong>Gelecek nesillere yaşanabilir bir dünya bırakırız</strong> - Sürdürülebilir kaynak kullanımı sağlarız</li>
-                <li><strong>Su kaynaklarını temiz tutar</strong> - İçme suyu kalitesini artırır</li>
-                <li><strong>Hava kalitesini iyileştirir</strong> - Solunum hastalıklarını azaltır</li>
-                <li><strong>Ekonomik fayda sağlar</strong> - Doğal kaynaklara dayalı ekonomileri korur</li>
+                <li><strong>Biyolojik çeşitliliği korur</strong> - Milyonlarca türün yaşam alanını muhafaza ederiz. Her yıl 10.000'den fazla tür yok oluyor.</li>
+                <li><strong>İklim değişikliğini yavaşlatır</strong> - Karbon ayak izimizi azaltırız. Ormanlar yılda 2.6 milyar ton CO2 emiyor.</li>
+                <li><strong>Gelecek nesillere yaşanabilir bir dünya bırakırız</strong> - Sürdürülebilir kaynak kullanımı sağlarız.</li>
+                <li><strong>Su kaynaklarını temiz tutar</strong> - İçme suyu kalitesini artırır. Dünya nüfusunun %40'ı su kıtlığı riski altında.</li>
+                <li><strong>Hava kalitesini iyileştirir</strong> - Solunum hastalıklarını azaltır. Hava kirliliği yılda 7 milyon erken ölüme neden oluyor.</li>
+                <li><strong>Ekonomik fayda sağlar</strong> - Doğal kaynaklara dayalı ekonomileri korur. Doğa turizmi küresel ekonominin %10'unu oluşturuyor.</li>
+                <li><strong>Gıda güvenliğini sağlar</strong> - Tarım alanlarının verimliliğini korur. Toprakların %33'ü erozyon tehdidi altında.</li>
+                <li><strong>Tıbbi araştırmalara kaynak oluşturur</strong> - İlaçların %25'i tropikal bitkilerden elde ediliyor.</li>
+                <li><strong>Ruh sağlığını iyileştirir</strong> - Doğada geçirilen zaman stresi %28 oranında azaltıyor.</li>
+                <li><strong>Ekosistem dengesini korur</strong> - Doğal afetlerin etkisini azaltır. Sağlıklı sulak alanlar sel hasarını %60 azaltıyor.</li>
             </ul>
         </section>
 
@@ -266,34 +274,90 @@
             <h2>KÜRESEL ISINMA</h2>
             
             <div class="fact-card">
-                <p>Küresel ısınma, insan faaliyetleri sonucu atmosfere salınan sera gazlarının neden olduğu iklim değişikliğidir.</p>
+                <p>Küresel ısınma, insan faaliyetleri sonucu atmosfere salınan sera gazlarının neden olduğu iklim değişikliğidir. Son 100 yılda dünya sıcaklığı 1.1°C arttı ve bu artışın %95'inden fazlası insan kaynaklı.</p>
             </div>
             
             <h3>ETKİLERİ:</h3>
             <ul>
-                <li><strong>Buzulların erimesi</strong> - Deniz seviyeleri yükseliyor, kıyı şehirleri tehdit altında</li>
-                <li><strong>Aşırı hava olayları</strong> - Kasırga, sel ve kuraklıkların sıklığı ve şiddeti artıyor</li>
-                <li><strong>Tarım alanlarının azalması</strong> - Gıda güvenliği ciddi risk altında</li>
-                <li><strong>Okyanus asitlenmesi</strong> - Deniz ekosistemleri çöküş noktasında</li>
-                <li><strong>Türlerin yok oluşu</strong> - Biyoçeşitlilik alarm verici hızda azalıyor</li>
-                <li><strong>Salgın hastalıklar</strong> - Yeni virüsler ve hastalıklar ortaya çıkıyor</li>
+                <li><strong>Buzulların erimesi</strong> - Deniz seviyeleri yükseliyor, kıyı şehirleri tehdit altında. 2100 yılına kadar deniz seviyesinin 1 metre yükseleceği tahmin ediliyor.</li>
+                <li><strong>Aşırı hava olayları</strong> - Kasırga, sel ve kuraklıkların sıklığı ve şiddeti artıyor. Son 20 yılda doğal afetler %75 arttı.</li>
+                <li><strong>Tarım alanlarının azalması</strong> - Gıda güvenliği ciddi risk altında. Her 1°C sıcaklık artışında buğday verimi %6 düşüyor.</li>
+                <li><strong>Okyanus asitlenmesi</strong> - Deniz ekosistemleri çöküş noktasında. Okyanuslar endüstri devriminden bu yana %30 daha asitli hale geldi.</li>
+                <li><strong>Türlerin yok oluşu</strong> - Biyoçeşitlilik alarm verici hızda azalıyor. İklim değişikliği türlerin %25'ini yok olma tehlikesiyle karşı karşıya bırakıyor.</li>
+                <li><strong>Salgın hastalıklar</strong> - Yeni virüsler ve hastalıklar ortaya çıkıyor. Sıcaklık artışı hastalık taşıyan böceklerin yayılma alanını genişletiyor.</li>
+                <li><strong>Okyanus akıntılarının bozulması</strong> - Küresel iklim sistemini tehdit ediyor. Gulf Stream akıntısı son 1000 yılın en zayıf seviyesinde.</li>
+                <li><strong>Permafrost erimesi</strong> - Donmuş toprakların çözülmesiyle milyarlarca ton metan gazı açığa çıkıyor.</li>
+                <li><strong>Mercan resiflerinin ölümü</strong> - Deniz yaşamının %25'i mercan resiflerine bağımlı. 2050'ye kadar mercanların %90'ı yok olabilir.</li>
+                <li><strong>Göç dalgaları</strong> - 2050'ye kadar 200 milyon iklim mültecisi olması bekleniyor.</li>
             </ul>
+        </section>
+
+        <section id="cozumler">
+            <h2>ÇÖZÜMLER</h2>
             
-            <h3>ÇÖZÜMLER:</h3>
+            <div class="fact-card">
+                <p>Küresel ısınma ve çevre sorunlarıyla mücadele etmek için bireysel ve toplumsal olarak yapabileceğimiz pek çok şey var. Her birimizin küçük adımları büyük değişimlere yol açabilir.</p>
+            </div>
+            
+            <h3>BİREYSEL ÇÖZÜMLER:</h3>
             <ol>
-                <li><strong>Enerji tasarrufu yapın</strong> - LED ampuller ve yüksek verimli cihazlar kullanın</li>
-                <li><strong>Sürdürülebilir ulaşım</strong> - Toplu taşıma, bisiklet veya yürüyüşü tercih edin</li>
-                <li><strong>Geri dönüşüm</strong> - Atıklarınızı ayrıştırın, kompost yapın</li>
-                <li><strong>Yenilenebilir enerji</strong> - Güneş panelleri ve rüzgar enerjisi sistemlerini destekleyin</li>
-                <li><strong>Su koruma</strong> - Yağmur suyu hasadı yapın, su tasarruflu cihazlar kullanın</li>
-                <li><strong>Ağaçlandırma</strong> - Yerel ağaç dikme projelerine katılın</li>
-                <li><strong>Bilinçli tüketim</strong> - Yerel ve organik ürünleri tercih edin</li>
+                <li><strong>Enerji tasarrufu yapın</strong> - LED ampuller ve yüksek verimli cihazlar kullanın. Evlerde enerji tüketimini %30 azaltabilirsiniz.</li>
+                <li><strong>Sürdürülebilir ulaşım</strong> - Toplu taşıma, bisiklet veya yürüyüşü tercih edin. Haftada 1 gün araba kullanmayarak yılda 500 kg CO2 tasarrufu sağlayabilirsiniz.</li>
+                <li><strong>Geri dönüşüm</strong> - Atıklarınızı ayrıştırın, kompost yapın. 1 ton kağıt geri dönüşümü 17 ağacı kurtarır.</li>
+                <li><strong>Yenilenebilir enerji</strong> - Güneş panelleri ve rüzgar enerjisi sistemlerini destekleyin. Evinize güneş paneli taktırarak yıllık 1.5 ton CO2 tasarrufu yapabilirsiniz.</li>
+                <li><strong>Su koruma</strong> - Yağmur suyu hasadı yapın, su tasarruflu cihazlar kullanın. Duş süresini 1 dakika kısaltarak yılda 8 ton su tasarrufu sağlayabilirsiniz.</li>
+                <li><strong>Ağaçlandırma</strong> - Yerel ağaç dikme projelerine katılın. Bir ağaç ömrü boyunca 1 ton CO2 emer.</li>
+                <li><strong>Bilinçli tüketim</strong> - Yerel ve organik ürünleri tercih edin. Gıda nakliyesi küresel emisyonların %11'ini oluşturuyor.</li>
+                <li><strong>Plastik kullanımını azaltın</strong> - Yeniden kullanılabilir ürünler tercih edin. Okyanuslarda her yıl 8 milyon ton plastik atık birikiyor.</li>
+                <li><strong>Enerji verimliliği</strong> - Ev izolasyonunu iyileştirin, akıllı termostatlar kullanın. İyi bir izolasyon enerji tüketimini %40 azaltabilir.</li>
+                <li><strong>Çevre dostu bankacılık</strong> - Sürdürülebilir yatırım yapan finans kuruluşlarını destekleyin.</li>
+                <li><strong>Dijital ayak izini azaltın</strong> - Gereksiz e-postaları silin, bulut depolamayı optimize edin. Dijital teknolojiler küresel emisyonların %4'ünden sorumlu.</li>
+                <li><strong>Eğitim ve farkındalık</strong> - Çevre konusunda bilgilenin ve çevrenizdekileri bilinçlendirin.</li>
             </ol>
+
+            <h3>TOPLUMSAL ÇÖZÜMLER:</h3>
+            <ol>
+                <li><strong>Yenilenebilir enerji yatırımları</strong> - Güneş ve rüzgar enerjisi altyapısını genişletmek</li>
+                <li><strong>Sürdürülebilir şehir planlaması</strong> - Yeşil alanları artırmak, bisiklet yolları oluşturmak</li>
+                <li><strong>Atık yönetim sistemleri</strong> - Geri dönüşüm ve kompost tesisleri kurmak</li>
+                <li><strong>Tarım reformları</strong> - Organik tarımı desteklemek, monokültür tarımdan vazgeçmek</li>
+                <li><strong>Çevre politikaları</strong> - Karbon vergisi uygulamak, fosil yakıt sübvansiyonlarını kaldırmak</li>
+                <li><strong>Eğitim programları</strong> - Okullarda çevre bilinci dersleri vermek</li>
+                <li><strong>Yeşil teknolojiler</strong> - Temiz enerji araştırmalarına yatırım yapmak</li>
+                <li><strong>Uluslararası işbirliği</strong> - İklim anlaşmalarına uymak, küresel hedefler belirlemek</li>
+            </ol>
+        </section>
+
+        <section id="projeler">
+            <h2>KATILABİLECEĞİNİZ PROJELER</h2>
+            
+            <div class="fact-card">
+                <p>Dünya çapında ve ülkemizde doğa koruma ve iklim değişikliğiyle mücadele için pek çok proje yürütülüyor. İşte destek olabileceğiniz bazı projeler:</p>
+            </div>
+            
+            <h3>YEREL PROJELER:</h3>
+            <ul>
+                <li><strong>TEMA Vakfı</strong> - Ağaçlandırma ve erozyon kontrol projeleri</li>
+                <li><strong>WWF-Türkiye</strong> - Nesli tehlikedeki türlerin korunması</li>
+                <li><strong>ÇEKÜL</strong> - Doğal ve kültürel mirasın korunması</li>
+                <li><strong>Buğday Derneği</strong> - Ekolojik yaşam ve organik tarım projeleri</li>
+                <li><strong>Deniz Temiz Derneği</strong> - Deniz kirliliğiyle mücadele</li>
+            </ul>
+
+            <h3>ULUSLARARASI PROJELER:</h3>
+            <ul>
+                <li><strong>350.org</strong> - Fosil yakıtsız bir dünya için kampanyalar</li>
+                <li><strong>Greenpeace</strong> - Okyanusların ve ormanların korunması</li>
+                <li><strong>Earth Hour</strong> - Enerji tasarrufu için küresel hareket</li>
+                <li><strong>Plastic Bank</strong> - Okyanus plastiklerinin toplanması ve geri dönüşümü</li>
+                <li><strong>Eden Reforestation</strong> - Dünya çapında ağaçlandırma projeleri</li>
+            </ul>
         </section>
     </div>
 
     <footer>
         <p><strong>MADE BY QUİDE</strong></p>
+        <p>Doğa için harekete geç - Bugün başla, yarın için fark yarat</p>
     </footer>
 
     <script>
